@@ -1,0 +1,94 @@
+/* ==========================
+ * PowerToWeb - Helpers
+ * ==========================*/
+
+ // Logo
+ .logo {color: #fff;width:250px; margin-left: -10px; margin: 6px 0; }
+
+// Floats
+.left { float: left; }
+.right { float: right; }
+
+// Display
+.block { display: block; }
+.inline { display: inline; }
+.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.none, 
+[hidden] {
+  display: none;
+}
+
+// Font Styles and Weights
+.font-normal { font-style: normal; }
+.capitalize { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+.bold, b, .strong, strong {font-weight: 700;}
+.bolder {font-weight: 900;}
+.light {font-weight: 300;}
+.lighter {font-weight: 100;}
+
+// Text colors
+.text-white, .text-white a {color: @color-White;}
+.text-black, .text-black a {color: @black-color;}
+.text-blue, .text-blue a{color: @blue-color;}
+.text-red, .text-red a{color: @red-color;}
+.text-green, .text-green a{color: @green-color;}
+.text-orange, .text-orange a{color: @orange-color;}
+.text-black, .text-black a{color: @black-color;}
+
+// Text Position
+.text-left { 
+  text-align: left;
+  & img.displayed {
+      display: block;
+      margin-left: 0;
+      margin-right: auto
+    }
+}
+.text-right { 
+  text-align: right; 
+  & img.displayed {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+    }
+ }
+.text-center { 
+  text-align: center; 
+    & img.displayed {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+ }
+
+// Accessibility (offscreen text for screen readers)
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -9999em;
+}
+
+// Image Spacing
+.image-left { margin-right: 20px; }
+.image-right { margin-left: 20px; }
+
+//##################
+//Provisory here - the demo grid helper
+span.demo {
+    min-height: 60px;
+    background: #DEE2E1;
+    line-height: 60px;
+    border-radius: 2px;
+    display: block;
+    color: #97B3B1;
+}

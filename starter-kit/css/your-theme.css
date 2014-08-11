@@ -1,0 +1,18 @@
+body {
+  font-family: "Helvetica";
+  text-align: center;
+  padding: 50px 0 0;
+  background: rgba(102, 128, 153, 0.07);
+  color: rgba(102, 153, 139, 0.53);
+  margin: 0;
+}
+h1 {
+  border-bottom: rgba(163, 194, 185, 0.53) solid 1px;
+  padding: 20px 0;
+}
+h5 {
+  color: rgba(163, 194, 185, 0.53);
+}
+footer {
+  padding: 50px 0 0;
+}

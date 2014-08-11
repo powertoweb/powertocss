@@ -1,0 +1,38 @@
+<%- partial("_parcials/_head") %>
+<body>
+ <header id="header" class="header-powertocss text-white">
+   <div class="grid-960">
+     <div class="row">
+        <div class="column4">
+          <h1 class="logo left">
+            <a href="./">
+             <img src="img/logo.png" alt="PowerToCSS">
+           </a>
+          </h1>
+        </div>
+       <div class="column8 end">
+         <nav class="menu right">
+           <label class="toggle-mobile-menu" for="toggle-mobile-menu">&#9776; MENU</label>
+            <input id="toggle-mobile-menu" type="checkbox"/>
+            <ul>
+              <li><a href="./">Home</a></li>
+             <li><a href="./grid">Grid</a></li>
+             <li><a href="./docs">Docs</a></li>
+             <li><a href="./docs"><button>Get Started</button></a></li>
+           </ul>
+         </nav> 
+       </div>
+      </div>
+   </div>
+   <% if(current.source == 'index') { %>
+    <%- partial("_parcials/_header-home") %>
+   <% } %>
+ </header>
+ <div class="grid-960">
+   <div class="row">
+ 	   <%- yield %>
+ 	</div>
+ </div>
+<%- partial("_parcials/_footer") %>
+</body>
+</html>

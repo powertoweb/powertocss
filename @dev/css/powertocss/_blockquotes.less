@@ -1,0 +1,29 @@
+/* =========================
+ * PowerToWeb - Blockquotes
+ * =========================*/
+blockquote {
+color: darken(rgba(102, 128, 153, 0.9), 5%);
+border-left: 15px solid rgba(102, 128, 153, 0.075);
+background-color: rgba(102, 128, 153, 0.07);
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+padding: 15px 20px;
+&:extend(.em);
+  p {
+    margin: 1em 0;
+  }
+}
+cite {
+  font-style: normal;
+  &:extend(.font-normal);
+  .font-size(18);
+}
+q {
+  &:extend(.em);
+  quotes: none;
+}
+q:before, q:after {
+  content: '';
+  content: none;
+}
+

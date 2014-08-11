@@ -1,0 +1,124 @@
+/**============================================
+ * PowerToCSS Standard Theme
+ * Author: Hailton Silva - http://hailton.com
+ * MIT Licence - Copyright 2014 | PowerToWeb
+ * http://powertoweb.com/powertocss
+ ==============================================*/
+
+// ======================================================================
+// START Mixins and variable - ALL YOUR MIXINS COMES HERE
+// ======================================================================
+
+// Variables
+@default-font-color:      #434343;
+@default-link-color:      @green-color;
+
+@blue-color:              #50A4C5;
+@red-color:               #E04533;
+@green-color:             #9CD688;
+@orange-color:            #FAAD67;
+@black-color:             #444;
+
+@default-BgColor:         #fff;
+@color-White:             #fff;
+
+
+// =============
+// Mixins
+
+// Border Radius
+.border-radius(@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius;}
+// Opacity
+.opacity (@opacity: 0.5) { -webkit-opacity:  @opacity; -moz-opacity:     @opacity; opacity:    @opacity;}
+
+// Mixins - Buttons
+.buttonMixin(@color: #444, @BgColor: #f9f9f9){
+  border: 1px solid @BgColor;
+  font-weight: 700;
+  border-bottom: 3px solid darken(@BgColor, 15%);
+  padding: 0.5em 1.5em;
+  margin: 0.15em;
+  color: @color;
+  background-color: @BgColor;;
+  text-decoration: none;
+  .border-radius(4px;);
+    &:extend(.text-center);
+    &:extend(.inline-block);
+  position: relative;
+    &:hover,
+    &:focus,
+    &.active {
+      .opacity(0.9); 
+      outline: none;
+    }
+    &:active {
+      top: 1px;
+      outline: @BgColor;
+    }
+}
+
+//Vertical Gradient
+.gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+// =========================================================
+// END Mixins and Variables
+// =========================================================
+
+
+
+// **********************************
+/* Custom CSS styles goes here */
+// *********************************
+.text-shadow (@string) {
+  text-shadow: @string;
+} 
+.header-powertocss {
+    color: #fff;
+    .text-shadow(2px 2px 3px rgba(0,0,0,.25));
+    margin-bottom: 11px; 
+      & a:hover{color: #4BD87E;text-shadow:none;}
+  }
+//.menu a, .menu { text-shadow:none;background: none;line-height: 3; border:none;}
+/*.menu {
+    background: none;
+    line-height: 3;
+    margin-top: -18px;
+}*/
+
+.quick-start {min-height: 100px; background: #CEF3EE;color: #119888;text-shadow:none;}
+
+
+.octicon, .mega-octicon {
+background: rgba(102, 143, 153, 0.075);
+padding: 24px;
+border-radius: 30%;
+font-size: 64px !important;
+color: rgba(102, 143, 153, 0.77);
+}
+
+
+
+// Buttons
+.button, button {
+  .buttonMixin; 
+    border-left: 1px solid darken(@default-BgColor, 10%);border-right: 1px solid darken(@default-BgColor, 10%);border-top: 1px solid darken(@default-BgColor, 10%);
+}
+
+.button-blue { .buttonMixin(@color-White; @blue-color );.gradient (@blue-color,darken(@blue-color, 8%));}
+
+.button-red { .buttonMixin(@color-White; @red-color );.gradient (@red-color,darken(@red-color, 8%));}
+
+.button-green { .buttonMixin(@color-White; @green-color );.gradient (@green-color,darken(@green-color, 8%));}
+
+.button-orange { .buttonMixin(@color-White; @orange-color );.gradient (@orange-color,darken(@orange-color, 8%));}
+
+.button-black { .buttonMixin(@color-White; @black-color );.gradient (@black-color,darken(@black-color, 8%));}
+
+.button-disabled, button[disabled] {.buttonMixin(#999; #eee); border-bottom: 4px solid #eee; &:active {top: 0px;} &:hover, &:focus, &.active { .opacity(1);} }

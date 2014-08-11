@@ -1,0 +1,39 @@
+/* =======================
+ * PowerToWeb - Buttons
+ * =======================*/
+
+// buttons
+.button, .button-default{
+  font-weight: 700;
+  padding: 0.5em 1.5em;
+  margin: 0.15em;
+  text-decoration: none;
+  .border-radius(4px;);
+    &:extend(.text-center);
+    &:extend(.inline-block);
+  position: relative;
+    &:hover,
+    &:focus,
+    &.active {
+      .opacity(0.90); 
+      outline: none;
+    }
+    &:active {
+      top: 1px;
+      outline: @blue-color;
+    }
+}
+
+button { .button-default; border: 1px solid darken(@default-BgColor, 10%); .background-color(#F9F9F9); .color(@black-color);}
+
+.button-blue { .background-color(@blue-color); .color(@white-color); }
+
+.button-red { .background-color(@red-color); .color(@white-color); }
+
+.button-green { .background-color(@green-color); .color(@white-color); }
+
+.button-orange { .background-color(@orange-color); .color(@white-color); }
+
+.button-black { .background-color(@black-color); .color(@white-color); }
+
+.button-disabled, button[disabled] { &:active {top: 0px;} &:hover, &:focus, &.active { .opacity(1);} .background-color(#eee); .color(#aaa);}
