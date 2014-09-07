@@ -1,7 +1,7 @@
 {
-  "name": "powertocss", 
+  "name": "powertocss",
   "description": "A versatile CSS Framework. Simple, light and responsive!",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/powertoweb/powertocss",
   "author": {
     "name": "Hailton Silva",
@@ -19,9 +19,13 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-compress": "^0.10.0",
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-harp": "^0.1.4"
+  },
+  "dependencies": {
+    "grunt-contrib-copy": "^0.5.0"
   }
 }
