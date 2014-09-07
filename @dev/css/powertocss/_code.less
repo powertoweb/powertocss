@@ -1,5 +1,5 @@
 /* ======================
- * PowerToWeb - Code
+ * PowerToCSS - Code
  * ======================*/
 code,
 kbd,
@@ -13,7 +13,7 @@ code {
   font-size: 90%;
   color: @red-color;
   background-color: #f9f2f4;
-  white-space: nowrap;
+  word-break: break-all;
   .border-radius(4px);
 }
 pre {
@@ -22,14 +22,15 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre-wrap;
-  color: darken(rgba(102, 128, 153, 0.9), 5%);
-  background-color: rgba(102, 128, 153, 0.07);
-  border-left: 15px solid rgba(102, 128, 153, 0.075);
+  color: #e04533;
+  background-color: #f9f2f4;
+  border-left: 15px solid #F7ECEF;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 pre code {
   color: inherit;
+  line-height: 20px;
   white-space: pre-wrap;
   background-color: transparent;
 }
