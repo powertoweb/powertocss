@@ -1,0 +1,38 @@
+/* ===========================
+ * PowerToCSS - Lists
+ * ===========================*/
+menu, ol, ul { padding: 0; }
+
+dl, menu, ol, ul,  dd, ul ul, ol ol, ul ol, ol ul {list-style: none;}
+dt { &:extend(.font-normal); }
+dd { margin-bottom: 1em;}
+
+li{margin-left: 5px; .line-height(@default-line-height);}
+
+nav ul, nav ol { list-style: none; list-style-image: none; }
+
+.inline {
+  &:extend(.list-unstyled);
+  &:extend(.inline-block);
+  li {
+    &:extend(.list-unstyled li);
+    &:extend(.inline-block);
+  }
+}
+
+
+
+ol {
+list-style-type: decimal;
+ 	> li {
+	position: relative;
+	margin-left: 23px;
+	}
+}
+
+
+dl dt, dl dd {padding: 4px 0;}
+dl dt {border-bottom: 1px solid #ddd;}
+dd {
+margin-left: 0;color: #999;
+}

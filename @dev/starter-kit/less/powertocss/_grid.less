@@ -1,0 +1,56 @@
+/* =======================
+ * PowerToCSS - Grid & Layout (header, footer)
+ * =======================*/
+
+// The Grid Mixin to make this work
+.generate-columns(@columns; @current: 1) when (@current =< @columns) {
+	//Responsive / adaptable columns
+    .column@{current},
+    .small-column@{current},
+    .non-responsive-column@{current} {
+        width: (@current/@columns*100%);
+        float:left;position:relative;
+    }
+    .generate-columns(@columns, (@current + 1));
+}
+// STANDARD GRID - This generate ALL the 12 columns (c1,c2,c3....c12)
+.generate-columns(12);
+
+
+.row, .clearfix{ &:before, &:after{content:'';display:table} }
+.row, .clearfix{&:after{clear:both}}
+.row,.clearfix{zoom:1}
+
+.grid-1200{margin:0 auto;max-width:1200px;width:100%;padding: 0 8px;}
+.grid-full{.grid-1200; width:100%;max-width:100%;padding: 0 8px;}
+.grid-960{.grid-1200;max-width:960px;padding: 0 8px;}
+.grid-640{.grid-1200;max-width:640px;padding: 0 8px;}
+.grid-320{.grid-1200;max-width:320px;padding: 0 8px;}
+
+
+img{max-width:100%;height:auto;display:block;}
+.row{width:100%;margin-bottom:20px;}
+.row .row{width:auto;}
+.end{float:right!important}
+
+// /* Media query for 960 Screens - sets nested grids to 100%
+// ============================================================= */
+// @media only screen and (max-width:768px){
+// .row .row .column1,.row .row .column2,.row .row .column3,.row .row .column4,.row .row .column5,.row .row .column6,.row .row .column7,.row .row .column8,.row .row .column9,.row .row .column10,.row .row .column11,.row .row .column12{width:100%;margin-bottom:20px}
+// .row .row > div:last-child{margin-bottom:0 !important}
+// }
+
+// /* Media query for iPad and tablets
+// ============================================================= */
+// @media handheld, only screen and (max-width: 641px), only screen and (max-device-width: 641px) and (orientation:portrait){
+// .row{margin-bottom:10px!important;}
+// .column1,.column2,.column3,.column4,.column5,.column6,.column7,.column8,.column9,.column10,.column11,.column12{width:100%;margin-right:0;margin-left:0;margin-bottom:20px}
+// }
+
+#top {font-size: 13px; color: rgba(170, 223, 248, 0.91); padding: 4px; background: rgba(16, 97, 135, 0.75); }
+/* Defaut header
+======================================================================== */
+#header {background-color: #5d99b4; height: auto;margin-bottom: 2em;}
+/* Defaut footer
+======================================================================== */
+#footer{background-color:#444;display:flex;color:#747575;font-size:14px;padding-top: 30px; a {color: #BBBBBB;}}

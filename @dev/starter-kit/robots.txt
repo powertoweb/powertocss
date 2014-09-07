@@ -1,0 +1,5 @@
+# A robots txt template file
+User-agent: *
+Disallow: 
+Sitemap: http://www.yoursite.com/sitemap.gz
+
