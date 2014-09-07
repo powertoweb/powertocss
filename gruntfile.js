@@ -44,7 +44,7 @@ module.exports = function(grunt) {
     // ===================================
     harp: {
       server: {
-        server: true, //Comment this to compile and uncomment to run the server
+        //server: true, //Comment this to compile and uncomment to run the server
         source: '@dev'
       },
       dist: {
