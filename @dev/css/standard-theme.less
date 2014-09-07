@@ -22,103 +22,67 @@
 @default-BgColor:         #fff;
 @color-White:             #fff;
 
-
-// =============
+// =========================
 // Mixins
+// =========================
 
-// Border Radius
 .border-radius(@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius;}
-// Opacity
 .opacity (@opacity: 0.5) { -webkit-opacity:  @opacity; -moz-opacity:     @opacity; opacity:    @opacity;}
+.text-shadow (@string) { text-shadow: @string;}
+.box-shadow (@string) { -webkit-box-shadow: @string; -moz-box-shadow:  @string; box-shadow: @string;}
+/* ==========================
+ * OVERRIDES
+ * ============================*/
+.nav-custom li a {color: #fff;background: #5d99b4; &:hover{color: rgba(255, 255, 255, 0.65);} }
+.nav-custom ,.nav-custom li:hover, .nav-custom li.active {background: #5d99b4;}
 
-// Mixins - Buttons
-.buttonMixin(@color: #444, @BgColor: #f9f9f9){
-  border: 1px solid @BgColor;
-  font-weight: 700;
-  border-bottom: 3px solid darken(@BgColor, 15%);
-  padding: 0.5em 1.5em;
-  margin: 0.15em;
-  color: @color;
-  background-color: @BgColor;;
-  text-decoration: none;
-  .border-radius(4px;);
-    &:extend(.text-center);
-    &:extend(.inline-block);
-  position: relative;
-    &:hover,
-    &:focus,
-    &.active {
-      .opacity(0.9); 
-      outline: none;
-    }
-    &:active {
-      top: 1px;
-      outline: @BgColor;
-    }
+cite {background: rgba(95, 157, 187, 0.16);color: rgba(27,111,150,0.7);padding: 5px; .border-radius(5px); }
+
+.mega-octicon {
+  background: rgba(16, 97, 135, 0.75);
+  padding: 24px;
+  border-radius: 30%;
+  font-size: 64px !important;
+  color: #fff;
 }
 
-//Vertical Gradient
-.gradient (@startColor: #eee, @endColor: white) {
-  background-color: @startColor;
-  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
-  background: -webkit-linear-gradient(top, @startColor, @endColor);
-  background: -moz-linear-gradient(top, @startColor, @endColor);
-  background: -ms-linear-gradient(top, @startColor, @endColor);
-  background: -o-linear-gradient(top, @startColor, @endColor);
-}
-
-// =========================================================
-// END Mixins and Variables
-// =========================================================
-
-
-
-// **********************************
-/* Custom CSS styles goes here */
-// *********************************
-.text-shadow (@string) {
-  text-shadow: @string;
-} 
+/* ==========================
+ * NEW STYLES
+ * ============================*/
 .header-powertocss {
-    color: #fff;
-    .text-shadow(2px 2px 3px rgba(0,0,0,.25));
-    margin-bottom: 11px; 
-      & a:hover{color: #4BD87E;text-shadow:none;}
+color: #fff;
+.text-shadow(2px 2px 3px rgba(0,0,0,.25));
+  & a:hover{text-shadow:none;}
+  & .button {background-color:rgba(214, 227, 240, 0.78); color:#fff; border: 0 !important; text-shadow: none;padding: 8px 32px;}
   }
-//.menu a, .menu { text-shadow:none;background: none;line-height: 3; border:none;}
-/*.menu {
-    background: none;
-    line-height: 3;
-    margin-top: -18px;
-}*/
 
-.quick-start {min-height: 100px; background: #CEF3EE;color: #119888;text-shadow:none;}
-
-
-.octicon, .mega-octicon {
-background: rgba(102, 143, 153, 0.075);
-padding: 24px;
-border-radius: 30%;
-font-size: 64px !important;
-color: rgba(102, 143, 153, 0.77);
+.quick-start {
+min-height: 100px;
+background-color: #e5e9ea;border: 1px solid #ede9e2;
+color: #548C9E; text-shadow:none;padding: 1em;
+  & .column3 {padding-right: 2em;}
+  & .column9 {padding-left: 2em;border-left: 1px solid #eaeaea;}
+  & code {background-color: #FFFFFF;}
+  & a {color: #393C3F;text-decoration: underline;}
+}
+.lead {
+color: #777;
+font-size: 1.3em;
+margin-bottom: 40px;
+}
+.pre-footer {
+margin-bottom: 0px;
+color: rgba(61, 99, 116, 1);
+background-color: #5d99b4;
 }
 
-
-
-// Buttons
-.button, button {
-  .buttonMixin; 
-    border-left: 1px solid darken(@default-BgColor, 10%);border-right: 1px solid darken(@default-BgColor, 10%);border-top: 1px solid darken(@default-BgColor, 10%);
+.blink {
+  animation: blink 1.5s steps(2, start) infinite;
+  -webkit-animation: blink 1.5s steps(2, start) infinite;
 }
-
-.button-blue { .buttonMixin(@color-White; @blue-color );.gradient (@blue-color,darken(@blue-color, 8%));}
-
-.button-red { .buttonMixin(@color-White; @red-color );.gradient (@red-color,darken(@red-color, 8%));}
-
-.button-green { .buttonMixin(@color-White; @green-color );.gradient (@green-color,darken(@green-color, 8%));}
-
-.button-orange { .buttonMixin(@color-White; @orange-color );.gradient (@orange-color,darken(@orange-color, 8%));}
-
-.button-black { .buttonMixin(@color-White; @black-color );.gradient (@black-color,darken(@black-color, 8%));}
-
-.button-disabled, button[disabled] {.buttonMixin(#999; #eee); border-bottom: 4px solid #eee; &:active {top: 0px;} &:hover, &:focus, &.active { .opacity(1);} }
+@keyframes blink {
+  to { visibility: hidden; }
+}
+@-webkit-keyframes blink {
+  to { visibility: hidden; }
+}
