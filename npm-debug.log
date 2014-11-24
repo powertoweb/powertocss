@@ -1,0 +1,31 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/hs/.nvm/v0.11.14/bin/node',
+1 verbose cli   '/home/hs/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'update' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 info outdated updating undefined
+5 verbose stack Error: Failed to parse json
+5 verbose stack Unexpected token }
+5 verbose stack     at parseError (/home/hs/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:378:25)
+5 verbose stack     at parseJson (/home/hs/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:85:51)
+5 verbose stack     at /home/hs/.nvm/v0.11.14/lib/node_modules/npm/node_modules/read-package-json/read-json.js:59:33
+5 verbose stack     at evalmachine.<anonymous>:295:14
+5 verbose stack     at /home/hs/.nvm/v0.11.14/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+5 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:93:15)
+6 verbose cwd /home/hs/Área de Trabalho/heroku-test/git@heroku.com:nozdil/public/powertocss
+7 error Linux 3.13.0-39-generic
+8 error argv "/home/hs/.nvm/v0.11.14/bin/node" "/home/hs/.nvm/v0.11.14/bin/npm" "update"
+9 error node v0.11.14
+10 error npm  v2.0.0
+11 error file /home/hs/Área de Trabalho/heroku-test/git@heroku.com:nozdil/public/powertocss/package.json
+12 error code EJSONPARSE
+13 error Failed to parse json
+13 error Unexpected token }
+14 error File: /home/hs/Área de Trabalho/heroku-test/git@heroku.com:nozdil/public/powertocss/package.json
+15 error Failed to parse package.json data.
+15 error package.json must be actual JSON, not just JavaScript.
+15 error
+15 error This is not a bug in npm.
+15 error Tell the package author to fix their package.json file. JSON.parse
+16 verbose exit [ 1, true ]
